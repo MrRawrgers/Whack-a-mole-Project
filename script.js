@@ -79,6 +79,7 @@ function countDown() {
         score.textContent = 0
         currentTime = 60
         currentScore = 0
+        result = 0
         start.disabled = false
         bump.forEach(className => {
             className.classList.remove('bump')
