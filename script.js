@@ -40,7 +40,7 @@ function moveBump() {
 start.addEventListener("click", () => {
     start.disabled = true
     moveBump()
-    timerId = setInterval(countDown, 300)
+    timerId = setInterval(countDown, 1000)
 })
 
 function countDown() {
