@@ -21,7 +21,7 @@ function randomBump() {
 }
 
 bump.forEach(id => {
-    id.addEventListener('mouseup', () => {
+    id.addEventListener('mousedown', () => {
         if (id.id === hitPosition) {
             result = result + 1
             score.textContent = result
@@ -73,7 +73,7 @@ function countDown() {
         bumpInterval = setInterval(randomBump, 500)
     }
 
-    if (currentTime === 0) {
+    if (currentTime === -1) {
         alert('Times up! Your final score is ' + result)
         if (result > currentBest) {
             best.textContent = result
