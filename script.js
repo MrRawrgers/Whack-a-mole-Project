@@ -2,11 +2,13 @@ const bump = document.querySelectorAll('.fieldDiv')
 const timeLeft = document.querySelector('#time-left')
 const start = document.getElementById("start");
 let score = document.querySelector('#score')
+let best = document.querySelector('#best')
 
 let result = 0
 let currentTime = timeLeft.textContent
 let currentScore = score.textContent
 let bumpInterval = 0
+let currentBest = best.textContent
 
 function randomBump() {
     bump.forEach(className => {
@@ -38,7 +40,7 @@ function moveBump() {
 start.addEventListener("click", () => {
     start.disabled = true
     moveBump()
-    timerId = setInterval(countDown, 1000)
+    timerId = setInterval(countDown, 300)
 })
 
 function countDown() {
@@ -73,6 +75,10 @@ function countDown() {
 
     if (currentTime === 0) {
         alert('Times up! Your final score is ' + result)
+        if (result > currentBest) {
+            best.textContent = result
+            currentBest = result
+        }
         clearInterval(timerId)
         clearInterval(bumpInterval)
         timeLeft.textContent = 60
