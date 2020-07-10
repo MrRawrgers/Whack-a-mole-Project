@@ -3,11 +3,11 @@
 .fields {height: 100px; position: relative; top: 0; left: 0;}
 .fieldDiv {position: relative;}
 #space {height: 10vh;}
-#wrapper {background-color: cyan; height: 40vh;}
+#wrapper {background-color: cyan; height: 770px; border-style: solid;}
 body {text-align: center; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 h1 {font-size: 70px;}
 h2 {font-size: 20px;}
-body {background-color: cyan;}
+body {background-color: cadetblue;}
 
 .bump {
     background-image: url("mrbump.png");
